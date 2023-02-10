@@ -24,4 +24,8 @@ export const goToNextPage = (currentPage) => {
 
 export const goToPreviousPage = (currentPage) => {
     return { type: 'PREVIOUS_PAGE', payload: currentPage };
-}; 
+};
+
+export const goToSelectPlanPage = () => {
+    return { type: 'SELECT_PLAN_PAGE' };
+};
