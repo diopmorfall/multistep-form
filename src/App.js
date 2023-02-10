@@ -47,17 +47,9 @@ function App() {
                 </>
             );
 
-        default:
-            return (
-                <>
-                    <StepsBar />
-                    <PersonalFormPage />
-                    <NavigationButtons currentPage={currentPage} />
-                </>
-            );
-        /*
+            
         case 4:
-        return (
+            return (
             <>
                 <StepsBar />
                 <FinishUpPage />
@@ -66,12 +58,16 @@ function App() {
         );
 
         case 5:
-        return (
-            <>
-                <CheckoutPage />
-            </>
-        );
-        */
+            return <CheckoutPage />
+
+        default:
+            return (
+                <>
+                    <StepsBar />
+                    <PersonalFormPage />
+                    <NavigationButtons currentPage={currentPage} />
+                </>
+            );
     }
 }
 
