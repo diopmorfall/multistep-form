@@ -6,8 +6,6 @@ import { selectPlan, setRecurrence } from '../../actions/';
 
 export default function SelectPlanPage() {
     const plansDetails = useSelector(state => state.plans);
-    const formData = useSelector(state => state.form);
-    console.log(formData);
     const dispatch = useDispatch();
     return (
         <section className="plan-choice">

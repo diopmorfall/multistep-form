@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import moduleStyles from './PickAddOnsPage.module.css';
 
 import { selectAddOn, removeAddOn } from '../../actions';
 
 
-export default function PickAddOnsPage(props) {
+export default function PickAddOnsPage() {
     const addOns = useSelector(state => state.addOns);
     const isYearlyPayment = useSelector(state => state.plans.isYearlyPayment);
     const dispatch = useDispatch();

@@ -14,7 +14,7 @@ const pagesReducer = (
         case 'PREVIOUS_PAGE':
             return {
                 ...state,
-                currentPage: state.currentPage - 1,
+                currentPage: state.currentPage > 1 ? state.currentPage - 1 : 1,
             }
 
         case 'SELECT_PLAN_PAGE':

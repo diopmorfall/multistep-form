@@ -22,7 +22,7 @@ export default function PersonalFormPage() {
 
     function checkFields(e) {
         const target = e.target;
-        target.value.length == 0
+        target.value.length === 0
             ? setAreInputsInvalid(prev => ({ ...prev, [target.name]: true }))
             : setAreInputsInvalid(prev => ({ ...prev, [target.name]: false }));
 

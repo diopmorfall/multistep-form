@@ -24,14 +24,14 @@ const addOnsReducer = (
     switch (action.type) {
         case 'SELECT_ADD_ON':
             return state.map(addOn => {
-                return action.payload == addOn.name
+                return action.payload === addOn.name
                     ? { ...addOn, isSelected: true }
                     : addOn;
             });
             
         case 'REMOVE_ADD_ON':
             return state.map(addOn => {
-                return action.payload == addOn.name
+                return action.payload === addOn.name
                     ? { ...addOn, isSelected: false }
                     : addOn;
             });

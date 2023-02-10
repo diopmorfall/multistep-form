@@ -30,7 +30,7 @@ const plansReducer = (
                 ...state,
                 plans: state.plans.map(plan => {
                     let newPlan = { ...plan, isSelected: false };
-                    if (action.payload == plan.title) {
+                    if (action.payload === plan.title) {
                         newPlan.isSelected = true;
                     }
                     return newPlan;
