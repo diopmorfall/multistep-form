@@ -1,15 +1,19 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import style from './StepsBar.module.css';
 
-//lis should include a Link to
 export default function StepsBar() {
-    return(
+    const page = useSelector(state => state.pages.currentPage);
+    return (
         <nav>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-                <li>4</li>
+            <ul className={style['ul']}>
+                {[1, 2, 3, 4].map(step => (
+                    <li key={step}
+                        style={page === step ? { backgroundColor: 'lightblue' } : {}}
+                    >
+                        {step}
+                    </li>
+                ))}
             </ul>
         </nav>
     );
