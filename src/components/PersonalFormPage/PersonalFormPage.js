@@ -34,7 +34,6 @@ export default function PersonalFormPage() {
 
         if (Object.keys(areInputsInvalid).every(value => value === false)) {
             dispatch(setPersonalInfo(formData));
-            //console.log('YEAHH', useSelector(state => state.form));
         }
     }
 
