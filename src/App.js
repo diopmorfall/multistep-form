@@ -10,12 +10,6 @@ import PickAddOnsPage from './components/PickAddOnsPage/PickAddOnsPage';
 import FinishUpPage from './components/FinishUpPage/FinishUpPage';
 import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 
-const attributions =
-    <div className="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Mor Fall Diop</a>.
-    </div>;
-
 function App() {
 
     const currentPage = useSelector((state) => state.pages.currentPage);

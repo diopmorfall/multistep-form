@@ -14,8 +14,6 @@ export default function FinishUpPage() {
         state.addOns.filter(addOn => addOn.isSelected === true)
     );
 
-    console.log(selectedAddOns);
-
     function getTotal() {
         let addOnsAmount = 0;
         if (isYearlyPayment) {
@@ -47,7 +45,7 @@ export default function FinishUpPage() {
                 {selectedAddOns && (
                     <div className="selected-add-ons">
                         {selectedAddOns.map(addOn => (
-                            <div>
+                            <div key={addOn.name}>
                                 <span>{addOn.name}</span>
                                 <span>
                                 ${isYearlyPayment
