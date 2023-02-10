@@ -1,24 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import style from './SelectPlanPage.module.css';
+import moduleStyles from './SelectPlanPage.module.css';
 
 import { selectPlan, setRecurrence } from '../../actions/';
-//* toggle between yearly and monthly plans updates prices
 
 export default function SelectPlanPage() {
-    const plansDetails = useSelector((state) => state.plans);
-    const formData = useSelector((state) => state.form);
+    const plansDetails = useSelector(state => state.plans);
+    const formData = useSelector(state => state.form);
     console.log(formData);
     const dispatch = useDispatch();
     return (
         <section className="plan-choice">
             <h1>Select your plan</h1>
             <h3>You have the option of monthly or yearly billing.</h3>
-            <div className={style['plans']}>
+            <div className={moduleStyles['plans']}>
                 {plansDetails.plans.map(plan => (
                     <div
                         key={plan.title}
-                        className={style['plan']}
+                        className={moduleStyles['plan']}
                         style={plan.isSelected ? { border: '2px solid purple' } : {}}
                         onClick={() => dispatch(selectPlan(plan.title))}
                     >
