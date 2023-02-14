@@ -9,7 +9,10 @@ export default function StepsBar() {
             <ul className={moduleStyles['ul']}>
                 {[1, 2, 3, 4].map(step => (
                     <li key={step}
-                        style={page === step ? { backgroundColor: 'lightblue' } : {}}
+                        style={page === step ?
+                            { backgroundColor: 'lightblue', border: '2px solid lightblue' } :
+                            {}
+                        }
                     >
                         {step}
                     </li>

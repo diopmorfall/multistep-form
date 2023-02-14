@@ -9,6 +9,11 @@
     scroll-behavior: smooth;
 }
 
+#root{
+    @apply relative mx-auto flex flex-col justify-between bg-blue-100 py-5;
+    height: 100vh;
+}
+
 .attribution{
     font-size: 11px;
     text-align: center;

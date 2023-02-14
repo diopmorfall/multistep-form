@@ -1,6 +1,18 @@
-.ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav {
+    @apply mb-10;
 }
+
+.ul {
+    @apply mx-auto flex w-2/3 justify-around;
+    list-style-type: none;
+}
+
+
+.ul li {
+    @apply h-10 w-10 rounded-full border-2 border-white bg-blue-300 text-center text-2xl font-semibold;
+}
+
