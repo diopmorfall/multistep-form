@@ -1,0 +1,31 @@
+.add-ons-container{
+    @apply flex flex-col justify-around;
+}
+
+.add-on {
+    @apply my-2 flex flex-row items-center rounded-xl p-4;
+}
+
+.selected-add-on{
+    @apply border-2 border-purple-700 bg-purple-100;
+}
+
+.add-on-checkbox {
+    @apply col-span-1 row-span-2 mr-5 w-6;
+}
+
+.add-on-details {
+    @apply flex flex-col;
+}
+
+.add-on-name{
+    @apply text-xl font-semibold text-blue-900;
+}
+
+.add-on-desc {
+    @apply text-gray-400;
+}
+
+.add-on-price {
+    @apply col-span-1 row-span-2 text-lg font-semibold text-purple-800;
+}
