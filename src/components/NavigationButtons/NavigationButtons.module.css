@@ -1,0 +1,11 @@
+footer{
+    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-5;
+}
+
+.prev-btn{
+    @apply font-semibold text-gray-400;
+}
+
+.next-btn{
+    @apply h-12 w-1/4 rounded-lg bg-blue-900 font-semibold text-white;
+}

@@ -1,26 +1,26 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
+import moduleStyles from './NavigationButtons.module.css';
 import { goToNextPage, goToPreviousPage } from '../../actions';
 
 export default function NavigationButtons() {
-    const page = useSelector((state) => state.pages.currentPage);
+    const page = useSelector(state => state.pages.currentPage);
     const dispatch = useDispatch();
 
     return (
-        <div className="navigation-btns">
+        <footer>
             <button
-                className="prev-step-btn"
+                className={moduleStyles["prev-btn"]}
                 onClick={() => dispatch(goToPreviousPage(page))}
             >
-                go back
+                Go Back
             </button>
             <button
-                className="next-step-btn"
+                className={moduleStyles["next-btn"]}
                 onClick={() => dispatch(goToNextPage(page))}
             >
-                next step
+                Next Step
             </button>
-        </div>
+        </footer>
     );
 }
