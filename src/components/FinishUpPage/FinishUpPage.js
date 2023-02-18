@@ -26,26 +26,28 @@ export default function FinishUpPage() {
     }
 
     return (
-        <section className="finish-up">
+        <section className={moduleStyles["finish-up"]}>
             <h1>Finishing up</h1>
-            <p>Double-check everything looks ok before confirming</p>
-            <div className="purchases">
-                <div className="purchases-header">
-                <h4>{selectedPlan.title}</h4>
-                <span>
-                    ${isYearlyPayment
-                        ? `+${selectedPlan.price.yearly}/yr`
-                        : `+${selectedPlan.price.monthly}/mo`}
-                </span>
-                <p
-                    className={moduleStyles['change']}
-                    onClick={() => dispatch(goToSelectPlanPage())}
-                >Change</p>
+            <h3>Double-check everything looks ok before confirming</h3>
+            <div className={moduleStyles["purchases"]}>
+                <div className={moduleStyles["purchases-header"]}>
+                    <div>
+                        <h5>{selectedPlan.title} ({isYearlyPayment ? 'Yearly' : 'Monthly'})</h5>
+                        <span
+                            className={moduleStyles['change-purchases']}
+                            onClick={() => dispatch(goToSelectPlanPage())}
+                        >Change</span>
+                    </div>
+                        <span className={moduleStyles["plan-amount"]}>
+                            ${isYearlyPayment
+                                ? `+${selectedPlan.price.yearly}/yr`
+                                : `+${selectedPlan.price.monthly}/mo`}
+                        </span>
                 </div>
                 {selectedAddOns && (
-                    <div className="selected-add-ons">
+                    <div className={moduleStyles["purchased-add-ons"]}>
                         {selectedAddOns.map(addOn => (
-                            <div key={addOn.name}>
+                            <div key={addOn.name} className={moduleStyles["purchased-add-on"]}>
                                 <span>{addOn.name}</span>
                                 <span>
                                 ${isYearlyPayment
@@ -57,9 +59,9 @@ export default function FinishUpPage() {
                     </div>
                 )}
             </div>
-            <div>
+            <div className={moduleStyles["total-container"]}>
                 <span>Total (per {isYearlyPayment ? 'year' : 'month'})</span>
-                <span className="total">${getTotal()}</span>
+                <span>${getTotal()}</span>
             </div>
         </section>
     );
