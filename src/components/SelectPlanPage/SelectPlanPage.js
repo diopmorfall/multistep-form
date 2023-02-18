@@ -15,8 +15,7 @@ export default function SelectPlanPage() {
                 {plansDetails.plans.map(plan => (
                     <div
                         key={plan.title}
-                        className={moduleStyles['plan']}
-                        style={plan.isSelected ? { border: '2px solid purple' } : {}}
+                        className={plan.isSelected ? `${moduleStyles["plan"]} ${moduleStyles["selected-plan"]}` : moduleStyles["plan"]}
                         onClick={() => dispatch(selectPlan(plan.title))}
                     >
                         <img src="" alt={plan.title} />
