@@ -41,47 +41,40 @@ export default function PersonalFormPage() {
         <section className={styles['form-page']}>
             <h1>Personal Info</h1>
             <h3>Please provide your name, email address, and phone number.</h3>
-            <form className={styles['form']}>
-                <label htmlFor="name">
-                    Name
+            <form>
+                <div class="input-container">
+                    <label htmlFor="name">Name</label>
+                    {areInputsInvalid.name && <small>This field is required</small>}
                     <input
-                        type="text"
-                        name="name"
+                        type="text" name="name"
                         value={formData.name}
                         onChange={handleChange}
                         onBlur={(e) => checkFields(e)}
                         placeholder="e.g. Stephen King"
                     />
-                    {areInputsInvalid.name && <small>This field is required</small>}
-                </label>
-                <label htmlFor="email">
-                    Email
+                </div>
+                <div class="input-container">
+                    <label htmlFor="email"> Email address</label>
+                    {areInputsInvalid.email && <small>Insert a valid email address</small>}
                     <input
-                        type="email"
-                        name="email"
+                        type="email" name="email"
                         value={formData.email}
                         onChange={handleChange}
                         onBlur={(e) => checkFields(e)}
                         placeholder="e.g. stephenking@lorem.com"
                     />
-                    {areInputsInvalid.email && (
-                        <small>Insert a valid email address</small>
-                    )}
-                </label>
-                <label htmlFor="phoneNumber">
-                    Phone number
+                </div>
+                <div class="input-container">
+                    <label htmlFor="phoneNumber"> Phone number</label>
+                    {areInputsInvalid.phoneNumber && <small>This field is required</small>}
                     <input
-                        type="tel"
-                        name="phoneNumber"
+                        type="tel" name="phoneNumber"
                         value={formData.phoneNumber}
                         onChange={handleChange}
                         onBlur={(e) => checkFields(e)}
                         placeholder="e.g. +1 234 567 890"
                     />
-                    {areInputsInvalid.phoneNumber && (
-                        <small>This field is required</small>
-                    )}
-                </label>
+                </div>
             </form>
         </section>
     );
