@@ -1,0 +1,15 @@
+.checkout{
+    @apply flex flex-col items-center;
+}
+
+.greetings{
+    @apply text-center text-xl font-normal text-gray-400;
+}
+
+.attribution{
+    @apply absolute bottom-5 text-center italic;
+}
+
+.attribution a{
+    @apply font-medium;
+}
