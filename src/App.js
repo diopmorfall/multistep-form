@@ -11,8 +11,8 @@ import FinishUpPage from './components/FinishUpPage/FinishUpPage';
 import CheckoutPage from './components/CheckoutPage/CheckoutPage';
 
 function App() {
-
     const currentPage = useSelector((state) => state.pages.currentPage);
+    
     switch (currentPage) {
         case 1:
             return (

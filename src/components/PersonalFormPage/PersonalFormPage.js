@@ -39,7 +39,7 @@ export default function PersonalFormPage() {
 
     return (
         <section className={moduleStyles['form-page']}>
-            <h1>Personal Info</h1>
+            <h1>Personal info</h1>
             <h3>Please provide your name, email address, and phone number.</h3>
             <form>
                 <div className={moduleStyles["input-container"]}>

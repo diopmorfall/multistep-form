@@ -8,9 +8,9 @@ export default function NavigationButtons() {
     const dispatch = useDispatch();
 
     return (
-        <footer>
+        <footer className={page === 1 ? 'justify-end' : ''}>
             <button
-                className={moduleStyles["prev-btn"]}
+                className={page === 1 ? `${moduleStyles['hidden-prev-btn']}` : moduleStyles["prev-btn"]}
                 onClick={() => dispatch(goToPreviousPage(page))}
             >
                 Go Back

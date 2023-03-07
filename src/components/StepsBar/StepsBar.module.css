@@ -7,13 +7,13 @@ nav {
 }
 
 .ul {
-    @apply mx-auto flex w-2/3 justify-around;
+    @apply mx-auto flex w-2/3 justify-around items-center;
     list-style-type: none;
 }
 
 
 .ul li {
-    @apply h-10 w-10 rounded-full border-2 border-white text-center text-2xl text-white font-semibold;
+    @apply h-9 w-9 rounded-full border-2 border-white text-center text-xl text-white font-semibold;
 }
 
 .current-page-li{
