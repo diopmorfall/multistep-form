@@ -1,5 +1,5 @@
 .form-page {
-    @apply relative bottom-32 mx-auto flex w-11/12 flex-col rounded-2xl border-2 border-blue-400 bg-white p-7;
+    @apply relative top-24 mx-auto flex w-11/12 flex-col rounded-2xl border-2 border-blue-400 bg-white p-7;
 }
 /*todo: needs to be generalized for each section title*/
 section h1{
@@ -23,7 +23,7 @@ label {
 }
 
 input {
-    @apply col-span-2 h-12 rounded-md border-2 font-semibold text-blue-800;
+    @apply col-span-2 h-10 rounded-md border-2 font-semibold text-blue-800;
 }
 
 small {
