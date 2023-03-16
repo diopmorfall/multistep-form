@@ -1,9 +1,14 @@
+.add-ons{
+    @apply top-28;
+    height: 60%;
+}
+
 .add-ons-container{
-    @apply flex flex-col justify-around;
+    @apply flex flex-col items-center;
 }
 
 .add-on {
-    @apply my-2 flex flex-row items-center rounded-xl p-4;
+    @apply my-2 w-full flex flex-row items-center justify-around rounded-xl p-2;
 }
 
 .selected-add-on{
@@ -11,21 +16,21 @@
 }
 
 .add-on-checkbox {
-    @apply col-span-1 row-span-2 mr-5 w-6;
+    @apply justify-self-start mr-5 w-6 text-left text-purple-700;
 }
 
 .add-on-details {
-    @apply flex flex-col;
+    @apply flex flex-col flex-1;
 }
 
 .add-on-name{
-    @apply text-xl font-semibold text-blue-900;
+    @apply font-semibold text-blue-900;
 }
 
 .add-on-desc {
-    @apply text-gray-400;
+    @apply text-sm text-gray-400;
 }
 
 .add-on-price {
-    @apply col-span-1 row-span-2 text-lg font-semibold text-purple-800;
+    @apply text-sm text-left font-semibold text-purple-800;
 }
