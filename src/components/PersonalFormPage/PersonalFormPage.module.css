@@ -1,5 +1,5 @@
 .form-page {
-    @apply relative top-24 h-2/3 mx-auto p-6 w-11/12 flex flex-col rounded-2xl bg-white shadow-lg;
+    @apply relative top-24 h-2/3 mx-auto w-11/12;
 }
 
 .form-page form{

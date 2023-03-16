@@ -1,17 +1,17 @@
-section {
-    @apply relative bottom-20 mx-auto flex w-11/12 flex-col rounded-2xl bg-white p-9;
+.plan-choice{
+    @apply  h-3/4 top-20;
 }
 
-.plan-choice{
-    @apply h-fit;
+.plan-choice h3{
+    @apply my-2.5;
 }
 
 .plans-container{
-    @apply flex flex-col justify-around;
+    @apply flex flex-col justify-around w-full;
 }
 
 .plan {
-    @apply my-2 grid grid-cols-2 grid-rows-2 gap-x-0 rounded-lg border-2 border-gray-400 p-3;
+    @apply my-1 h-1/4 flex flex-row justify-start items-center rounded-lg border-2 border-gray-400 p-2;
 }
 
 .selected-plan{
@@ -19,23 +19,31 @@ section {
 }
 
 .plan img{
-    @apply row-span-3 w-1/2 border-2;
+    @apply w-10 self-center ml-2 mr-4;
+}
+
+.plan-details{
+    @apply flex flex-col items-start;
 }
 
 .plan-title {
-    @apply text-xl font-semibold text-blue-900;
+    @apply text-lg font-semibold text-blue-900 first-letter:capitalize;
 }
 
 .plan-price {
-    @apply text-lg font-semibold text-gray-400;
+    @apply font-semibold text-gray-400;
 }
 
 .plan p{
-    @apply text-sm text-blue-900;
+    @apply text-xs text-blue-900;
 }
 
 .recurrence-setter{
-    @apply mt-5 flex flex-row justify-around rounded-md bg-purple-100 p-2;
+    @apply flex flex-row justify-around rounded-md bg-purple-100 p-2;
+}
+
+.recurrence-setter-positioning{
+    @apply relative top-10 w-full;
 }
 
 .selected{

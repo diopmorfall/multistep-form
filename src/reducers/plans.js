@@ -3,17 +3,17 @@ const plansReducer = (
         isYearlyPayment: false,
         plans: [
             {
-                title: 'Arcade',
+                title: 'arcade',
                 price: { yearly: 90, monthly: 9 },
                 isSelected: false,
             },
             {
-                title: 'Advanced',
+                title: 'advanced',
                 price: { yearly: 120, monthly: 12 },
                 isSelected: false,
             },
             {
-                title: 'Pro',
+                title: 'pro',
                 price: { yearly: 150, monthly: 15 },
                 isSelected: false,
             },
