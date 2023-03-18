@@ -16,10 +16,10 @@ export default function NavigationButtons() {
                 Go Back
             </button>
             <button
-                className={moduleStyles["next-btn"]}
+                className={page === 4 ? moduleStyles["confirm-btn"] : moduleStyles["next-btn"]}
                 onClick={() => dispatch(goToNextPage(page))}
             >
-                Next Step
+                {page === 4 ? "Confirm" : "Next Step"}
             </button>
         </footer>
     );
