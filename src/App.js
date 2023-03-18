@@ -52,7 +52,12 @@ function App() {
         );
 
         case 5:
-            return <CheckoutPage />
+            return(
+                <>
+                    <StepsBar />
+                    <CheckoutPage />
+                </>
+            );
 
         default:
             return (

@@ -1,11 +1,12 @@
 import React from 'react';
 import moduleStyles from './CheckoutPage.module.css';
+import thankYouIcon from '../../assets/images/icon-thank-you.svg';
 
 export default function CheckoutPage() {
     return (
-        <div>
+        <div className={moduleStyles['checkout-container']}>
             <section className={moduleStyles['checkout']}>
-                <img src="" alt="ok" />
+                <img src={thankYouIcon} alt="ok" />
                 <h1>Thank you!</h1>
                 <p className={moduleStyles["greetings"]}>
                     Thanks for confirming your subscription!
@@ -17,7 +18,7 @@ export default function CheckoutPage() {
             <div className={moduleStyles["attribution"]}>
                 Challenge from <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
                 Built by <a href="https://github.com/diopmorfall/">Mor Fall Diop</a>.
-            </div>;
+            </div>
         </div>
     );
 }

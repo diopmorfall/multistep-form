@@ -1,13 +1,25 @@
+.checkout-container{
+    @apply relative top-28 h-4/5 flex flex-col items-center;
+}
+
 .checkout{
-    @apply flex flex-col items-center;
+    @apply h-3/4 flex flex-col items-center p-7;
+}
+
+.checkout img{
+    @apply w-1/6 mx-auto my-8;
+}
+
+.checkout h1{
+    @apply text-2xl mb-3;
 }
 
 .greetings{
-    @apply text-center text-xl font-normal text-gray-400;
+    @apply text-center text-gray-400;
 }
 
 .attribution{
-    @apply absolute bottom-5 text-center italic;
+    @apply absolute bottom-0 px-5 text-xs text-center italic;
 }
 
 .attribution a{
