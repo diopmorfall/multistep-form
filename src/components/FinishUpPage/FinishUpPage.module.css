@@ -1,21 +1,25 @@
+.finish-up{
+    @apply top-28;
+    height: 60%;
+}
 .purchases{
     @apply flex flex-col;
 }
 
 .purchases-header{
-    @apply flex flex-row items-center justify-between;
+    @apply flex flex-row items-center justify-between text-lg;
 }
 
 .purchases-header h5{
-    @apply text-lg font-semibold text-blue-900;
+    @apply font-semibold text-blue-900 capitalize;
 }
 
 .change-purchases {
-    @apply text-lg font-semibold text-gray-400 underline;
+    @apply text-gray-400 underline;
 }
 
 .plan-amount{
-    @apply text-xl font-bold text-blue-900;
+    @apply font-semibold text-blue-900;
 }
 
 .purchased-add-ons{
@@ -27,7 +31,7 @@
 }
 
 .purchased-add-on span:first-of-type{
-    @apply text-lg font-semibold text-gray-400;
+    @apply text-lg text-gray-400;
 }
 
 .purchased-add-on span:last-of-type{
@@ -39,7 +43,7 @@
 }
 
 .total-container span:first-of-type{
-    @apply inline text-lg font-semibold text-gray-400;
+    @apply inline text-lg text-gray-400;
 }
 
 .total-container span:last-of-type{

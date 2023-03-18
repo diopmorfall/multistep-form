@@ -38,11 +38,11 @@ export default function FinishUpPage() {
                             onClick={() => dispatch(goToSelectPlanPage())}
                         >Change</span>
                     </div>
-                        <span className={moduleStyles["plan-amount"]}>
-                            ${isYearlyPayment
-                                ? `+${selectedPlan.price.yearly}/yr`
-                                : `+${selectedPlan.price.monthly}/mo`}
-                        </span>
+                    <span className={moduleStyles["plan-amount"]}>
+                        ${isYearlyPayment
+                            ? `${selectedPlan.price.yearly}/yr`
+                            : `${selectedPlan.price.monthly}/mo`}
+                    </span>
                 </div>
                 {selectedAddOns && (
                     <div className={moduleStyles["purchased-add-ons"]}>
@@ -50,9 +50,9 @@ export default function FinishUpPage() {
                             <div key={addOn.name} className={moduleStyles["purchased-add-on"]}>
                                 <span>{addOn.name}</span>
                                 <span>
-                                ${isYearlyPayment
-                                    ? `+${addOn.price.yearly}/yr`
-                                    : `+${addOn.price.monthly}/mo`}
+                                +{isYearlyPayment
+                                    ? `$${addOn.price.yearly}/yr`
+                                    : `$${addOn.price.monthly}/mo`}
                                 </span>
                             </div>
                         ))}
@@ -61,7 +61,9 @@ export default function FinishUpPage() {
             </div>
             <div className={moduleStyles["total-container"]}>
                 <span>Total (per {isYearlyPayment ? 'year' : 'month'})</span>
-                <span>${getTotal()}</span>
+                <span>
+                    +${isYearlyPayment ? `${getTotal()}/yr` : `${getTotal()}/mo`}
+                </span>
             </div>
         </section>
     );
