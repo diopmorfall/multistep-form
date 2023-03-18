@@ -11,10 +11,10 @@ export default function StepsBar() {
             <ul className={moduleStyles['ul']}>
                 {[1, 2, 3, 4].map(step => (
                     <li key={step}
-                        className={page === step ? moduleStyles['current-page-li'] : ''}
+                        className={page === step || (page === 5 && step === 4) ? moduleStyles['current-page-li'] : ''}
                     >
                         <span
-                            className={page === step ? moduleStyles['current-page'] : ''}
+                            className={page === step || (page === 5 && step === 4) ? moduleStyles['current-page'] : ''}
                         >{step}</span>
                         <div className={moduleStyles['caption']}>
                             <span>STEP {step}</span>
