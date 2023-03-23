@@ -19,11 +19,11 @@
 }
 
 .plan img{
-    @apply w-10 self-center ml-2 mr-4;
+    @apply w-9 self-center ml-2 mr-4;
 }
 
 .plan-details{
-    @apply flex flex-col items-start;
+    @apply flex flex-col items-start justify-around;
 }
 
 .plan-title {
@@ -43,7 +43,7 @@
 }
 
 .recurrence-setter-positioning{
-    @apply relative top-10 w-full;
+    @apply relative top-3 w-full;
 }
 
 .selected{

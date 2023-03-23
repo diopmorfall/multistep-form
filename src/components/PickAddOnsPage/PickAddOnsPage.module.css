@@ -15,8 +15,12 @@
     @apply border-2 border-purple-700 bg-purple-100;
 }
 
-.add-on-checkbox {
-    @apply justify-self-start mr-5 w-6 text-left text-purple-700;
+.add-on input[type="checkbox"]{
+    @apply justify-self-start mr-5 w-6 text-left;
+}
+
+.selected-add-on input[type="checkbox"]:checked{
+    @apply bg-purple-700 text-purple-700;
 }
 
 .add-on-details {

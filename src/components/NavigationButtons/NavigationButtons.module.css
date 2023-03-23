@@ -19,5 +19,5 @@ footer button:last-of-type{
 }
 
 .confirm-btn{
-    @apply bg-purple-800;
+    @apply bg-purple-900;
 }

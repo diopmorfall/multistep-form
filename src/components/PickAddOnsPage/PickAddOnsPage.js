@@ -27,12 +27,7 @@ export default function PickAddOnsPage() {
                             : dispatch(selectAddOn(addOn.name))
                         }
                     >
-                        <input className={moduleStyles["add-on-checkbox"]}
-                            type="checkbox"
-                            name=""
-                            id=""
-                            checked={addOn.isSelected}
-                        />
+                        <input type="checkbox" name="" id="" checked={addOn.isSelected} />
                         <div className={moduleStyles["add-on-details"]}>
                             <h5 className={moduleStyles["add-on-name"]}>{addOn.name}</h5>
                             <p className={moduleStyles["add-on-desc"]}>{addOn.description}</p>

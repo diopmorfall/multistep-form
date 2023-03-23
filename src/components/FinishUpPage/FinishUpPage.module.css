@@ -1,17 +1,18 @@
 .finish-up{
     @apply top-28;
-    height: 60%;
+    height: 65%;
 }
 .purchases{
-    @apply flex flex-col;
+    @apply  flex flex-col bg-purple-50 p-4 rounded-xl;
+    height: fit-content;
 }
 
 .purchases-header{
-    @apply flex flex-row items-center justify-between text-lg;
+    @apply flex flex-row items-center justify-between;
 }
 
 .purchases-header h5{
-    @apply font-semibold text-blue-900 capitalize;
+    @apply font-bold text-blue-900 capitalize;
 }
 
 .change-purchases {
@@ -19,11 +20,11 @@
 }
 
 .plan-amount{
-    @apply font-semibold text-blue-900;
+    @apply font-bold text-blue-900;
 }
 
 .purchased-add-ons{
-    @apply my-5 border-t-2 border-gray-200 py-2;
+    @apply mt-5 border-t-2 border-gray-200 py-2;
 }
 
 .purchased-add-on{
@@ -31,21 +32,21 @@
 }
 
 .purchased-add-on span:first-of-type{
-    @apply text-lg text-gray-400;
+    @apply text-gray-400;
 }
 
 .purchased-add-on span:last-of-type{
-    @apply text-xl font-semibold text-blue-900;
+    @apply font-semibold text-blue-900;
 }
 
 .total-container{
-    @apply flex flex-row justify-between;
+    @apply mt-5 px-1 flex flex-row justify-between;
 }
 
 .total-container span:first-of-type{
-    @apply inline text-lg text-gray-400;
+    @apply inline text-gray-400;
 }
 
 .total-container span:last-of-type{
-    @apply text-xl font-bold text-purple-900;
+    @apply text-lg font-bold text-purple-900;
 }
