@@ -15,9 +15,9 @@ label {
 }
 
 input {
-    @apply col-span-2 h-10 px-5 rounded-md border-2 font-semibold text-blue-800;
+    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800;
 }
 
 small {
-    @apply font-semibold text-red-400;
+    @apply font-bold text-red-400;
 }

@@ -27,11 +27,11 @@
 }
 
 .plan-title {
-    @apply text-lg font-semibold text-blue-900 first-letter:capitalize;
+    @apply text-lg font-medium text-blue-900 first-letter:capitalize;
 }
 
 .plan-price {
-    @apply font-semibold text-gray-400;
+    @apply font-medium text-gray-400;
 }
 
 .plan p{
@@ -39,7 +39,7 @@
 }
 
 .recurrence-setter{
-    @apply flex flex-row justify-around rounded-md bg-purple-100 p-2;
+    @apply h-12 flex flex-row justify-around items-center rounded-md bg-purple-100 p-2;
 }
 
 .recurrence-setter-positioning{
@@ -47,15 +47,15 @@
 }
 
 .selected{
-    @apply text-lg font-semibold text-blue-900;
+    @apply font-medium text-blue-900;
 }
 
 .not-selected{
-    @apply text-lg font-semibold text-gray-500;
+    @apply font-medium text-gray-500;
 }
 
 .toggle-container{
-    @apply flex w-16 cursor-pointer items-center  rounded-full bg-blue-900 p-1.5;
+    @apply flex w-12 h-2/3 cursor-pointer items-center rounded-full bg-blue-900 p-1.5;
 }
 
 .monthly{
@@ -67,5 +67,5 @@
 }
 
 .toggle{
-    @apply h-4 w-4 rounded-full bg-white;
+    @apply h-3.5 w-3.5 rounded-full bg-white;
 }

@@ -12,6 +12,7 @@
 #root{
     @apply relative mx-auto flex flex-col justify-between bg-blue-100 py-5;
     height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 section{
@@ -19,7 +20,7 @@ section{
 }
 
 section h1{
-    @apply text-3xl font-bold text-blue-900;
+    @apply text-2xl font-bold text-blue-900;
 }
 
 section h3{

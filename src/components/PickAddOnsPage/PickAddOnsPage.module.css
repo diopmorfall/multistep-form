@@ -28,7 +28,7 @@
 }
 
 .add-on-name{
-    @apply font-semibold text-blue-900;
+    @apply font-medium text-blue-900;
 }
 
 .add-on-desc {
@@ -36,5 +36,5 @@
 }
 
 .add-on-price {
-    @apply text-sm text-left font-semibold text-purple-800;
+    @apply text-sm text-left font-medium text-purple-800;
 }

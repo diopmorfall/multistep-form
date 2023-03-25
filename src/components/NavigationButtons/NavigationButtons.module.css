@@ -1,5 +1,5 @@
 footer{
-    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-5;
+    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-5 font-medium;
 }
 
 .hidden-prev-btn{
@@ -7,11 +7,11 @@ footer{
 }
 
 .prev-btn{
-    @apply font-semibold text-gray-400;
+    @apply text-gray-400;
 }
 
 footer button:last-of-type{
-    @apply h-12 w-1/3 rounded-lg font-semibold text-white;
+    @apply h-12 w-1/3 rounded-lg text-white;
 }
 
 .next-btn{

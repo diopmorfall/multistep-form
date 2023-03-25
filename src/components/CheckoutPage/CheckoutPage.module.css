@@ -3,7 +3,7 @@
 }
 
 .checkout{
-    @apply h-3/4 flex flex-col items-center p-7;
+    @apply h-3/4 flex flex-col items-center p-6;
 }
 
 .checkout img{
@@ -19,9 +19,9 @@
 }
 
 .attribution{
-    @apply absolute bottom-0 px-5 text-xs text-center italic;
+    @apply absolute bottom-0 px-5 text-xs text-center font-medium italic;
 }
 
 .attribution a{
-    @apply font-medium;
+    @apply font-bold;
 }
