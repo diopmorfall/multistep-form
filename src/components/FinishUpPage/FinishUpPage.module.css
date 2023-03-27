@@ -3,7 +3,7 @@
     height: 65%;
 }
 .purchases{
-    @apply  flex flex-col bg-purple-50 p-4 rounded-xl;
+    @apply  flex flex-col bg-purple-50 p-4 rounded-xl mt-5;
     height: fit-content;
 }
 
