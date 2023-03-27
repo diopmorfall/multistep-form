@@ -35,3 +35,9 @@ section h3{
 .attribution a{
     color: hsl(228, 45%, 44%);
 }
+
+@media only screen and (max-height: 500px) and (orientation: landscape){
+    #root{
+        height: 660px;
+    }
+}

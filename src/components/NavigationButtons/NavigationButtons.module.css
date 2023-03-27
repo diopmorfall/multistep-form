@@ -1,5 +1,5 @@
 footer{
-    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-5 font-medium sm:px-10;
+    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-3 font-medium sm:px-10;
 }
 
 .hidden-prev-btn{
@@ -20,4 +20,15 @@ footer button:last-of-type{
 
 .confirm-btn{
     @apply bg-purple-900;
+}
+
+@media only screen and (max-height: 500px) and (orientation: landscape){
+    footer{
+        @apply fixed h-1/6;
+        bottom: 0vh;
+    }
+
+    footer button:last-of-type{
+        @apply h-10;
+    }
 }
