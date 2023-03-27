@@ -1,5 +1,5 @@
 .plan-choice{
-    @apply  h-3/4 top-20;
+    @apply h-3/4 top-20;
 }
 
 .plan-choice h3{
@@ -55,7 +55,7 @@
 }
 
 .toggle-container{
-    @apply flex w-12 h-2/3 cursor-pointer items-center rounded-full bg-blue-900 p-1.5 sm:h-4/5;
+    @apply flex w-12 h-2/3 cursor-pointer items-center rounded-full bg-blue-900 p-1.5 sm:h-4/5 md:w-16;
 }
 
 .monthly{
@@ -67,5 +67,41 @@
 }
 
 .toggle{
-    @apply h-3.5 w-3.5 rounded-full bg-white;
+    @apply h-3.5 w-3.5 rounded-full bg-white md:h-4 w-4;
+}
+
+@media only screen and (min-width: 768px){
+    .toggle-container{
+        @apply h-full;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .plan-choice{
+        @apply top-40 h-2/3;
+    }
+
+    .plans-container{
+        @apply h-2/3
+    }
+
+    .plan img{
+        @apply w-12
+    }
+
+    .plan-title{
+        @apply text-xl;
+    }
+
+    .plan-price{
+        @apply text-lg;
+    }
+
+    .plan p{
+        @apply text-base;
+    }
+
+    .recurrence-setter{
+        @apply mt-8;
+    }
 }

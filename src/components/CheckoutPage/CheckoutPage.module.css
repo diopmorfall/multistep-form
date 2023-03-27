@@ -25,3 +25,35 @@
 .attribution a{
     @apply font-bold;
 }
+
+@media only screen and (max-height: 500px) and (orientation: landscape){
+    .attribution{
+        @apply text-sm;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .checkout-container{
+        @apply top-40;
+    }
+
+    .checkout{
+        @apply h-3/5;
+    }
+
+    .checkout img{
+        @apply w-1/5 my-10;
+    }
+
+    .checkout h1{
+        @apply text-3xl;
+    }
+
+    .greetings{
+        @apply text-lg;
+    }
+
+    .attribution{
+        @apply text-sm;
+    }
+}

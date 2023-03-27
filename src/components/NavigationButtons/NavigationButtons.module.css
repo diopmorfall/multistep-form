@@ -1,5 +1,5 @@
 footer{
-    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between bg-white p-3 font-medium sm:px-10;
+    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between items-center bg-white p-3 font-medium sm:px-10;
 }
 
 .hidden-prev-btn{
@@ -30,5 +30,16 @@ footer button:last-of-type{
 
     footer button:last-of-type{
         @apply h-10;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    footer{
+        @apply text-xl;
+        height: 10%;
+    }
+
+    footer button:last-of-type{
+        @apply h-3/4;
     }
 }

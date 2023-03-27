@@ -38,3 +38,29 @@
 .add-on-price {
     @apply text-sm text-left font-medium text-purple-800;
 }
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .add-ons{
+        @apply h-1/2 top-40;
+    }
+    
+    .add-ons-container{
+        @apply mt-8 h-3/4;
+    }
+
+    .add-on{
+        @apply w-4/5 mx-auto my-4;
+    }
+
+    .add-on input[type="checkbox"]{
+        @apply mr-8 w-7
+    }
+
+    .add-on-name{
+        @apply text-lg;
+    }
+
+    .add-on-desc, .add-on-price{
+        @apply text-base;
+    }
+}

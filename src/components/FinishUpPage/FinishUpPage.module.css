@@ -50,3 +50,26 @@
 .total-container span:last-of-type{
     @apply text-lg font-bold text-purple-900;
 }
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .finish-up{
+        @apply top-40;
+        height: 45%
+    }
+
+    .purchases{
+        @apply text-lg;
+    }
+
+    .total-container{
+        @apply mt-10;
+    }
+
+    .total-container span:first-of-type{
+        @apply text-xl;
+    }
+
+    .total-container span:last-of-type{
+        @apply text-2xl;
+    }  
+}

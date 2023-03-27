@@ -15,9 +15,23 @@ label {
 }
 
 input {
-    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800;
+    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800 md:h-12;
 }
 
 small {
     @apply font-bold text-red-400;
+}
+
+@media only screen and (min-width: 768px) and (orientation: portrait){
+    .form-page{
+        @apply top-40 h-1/2;
+    }
+
+    label{
+        @apply mb-2
+    }
+
+    input{
+        @apply h-12 text-lg;
+    }
 }
