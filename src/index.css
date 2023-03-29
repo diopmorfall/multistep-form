@@ -10,13 +10,17 @@
 }
 
 #root{
-    @apply relative mx-auto flex flex-col justify-between bg-blue-100 py-5;
     height: 100vh;
+    width: 100vw;
     font-family: 'Ubuntu', sans-serif;
 }
 
+.app{
+    @apply relative h-full w-full flex flex-col justify-center bg-blue-100;
+}
+
 section{
-    @apply relative w-11/12 mx-auto flex flex-col rounded-2xl bg-white p-6 shadow-lg sm:w-3/4;
+    @apply relative w-10/12 mx-auto flex flex-col rounded-2xl bg-white p-6 shadow-lg sm:w-3/4;
 }
 
 section h1{

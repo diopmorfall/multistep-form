@@ -1,5 +1,5 @@
 .form-page {
-    @apply relative top-24 h-2/3 mx-auto;
+    @apply bottom-8 h-3/5;
 }
 
 .form-page form{

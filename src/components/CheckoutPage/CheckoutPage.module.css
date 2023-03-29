@@ -1,9 +1,10 @@
 .checkout-container{
-    @apply relative top-28 h-4/5 flex flex-col items-center;
+    @apply relative bottom-3 h-3/5 flex flex-col items-center justify-between;
+    height: 65%
 }
 
 .checkout{
-    @apply h-3/4 flex flex-col items-center p-6;
+    @apply h-3/4 flex flex-col items-center p-7;
 }
 
 .checkout img{
@@ -19,7 +20,7 @@
 }
 
 .attribution{
-    @apply absolute bottom-0 px-5 text-xs text-center font-medium italic;
+    @apply absolute -bottom-16 px-4 text-xs text-center font-medium italic;
 }
 
 .attribution a{

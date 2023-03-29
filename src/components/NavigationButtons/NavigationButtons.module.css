@@ -1,5 +1,5 @@
 footer{
-    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between items-center bg-white p-3 font-medium sm:px-10;
+    @apply w-full absolute bottom-0 flex h-20 flex-row justify-between items-center bg-white p-5 font-medium sm:px-10 lg:col-span-2;
 }
 
 .hidden-prev-btn{

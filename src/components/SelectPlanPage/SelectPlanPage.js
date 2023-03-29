@@ -37,11 +37,7 @@ export default function SelectPlanPage() {
                     </div>
                 ))}
 
-                <div className={
-                    plansDetails.isYearlyPayment ?
-                    moduleStyles["recurrence-setter"] :
-                    `${moduleStyles["recurrence-setter"]} ${moduleStyles["recurrence-setter-positioning"]}`
-                }>
+                <div className={moduleStyles["recurrence-setter"]}>
                     <span className={
                             !plansDetails.isYearlyPayment ?
                             moduleStyles["selected"] : moduleStyles["not-selected"]

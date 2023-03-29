@@ -16,56 +16,56 @@ function App() {
     switch (currentPage) {
         case 1:
             return (
-                <>
+                <div className='app'>
                     <StepsBar />
                     <PersonalFormPage />
                     <NavigationButtons currentPage={currentPage} />
-                </>
+                </div>
             );
 
         case 2:
             return (
-                <>
+                <div className='app'>
                     <StepsBar />
                     <SelectPlanPage />
                     <NavigationButtons currentPage={currentPage} />
-                </>
+                </div>
             );
 
         case 3:
             return (
-                <>
+                <div className='app'>
                     <StepsBar />
                     <PickAddOnsPage />
                     <NavigationButtons currentPage={currentPage} />
-                </>
+                </div>
             );
 
             
         case 4:
             return (
-            <>
+            <div className='app'>
                 <StepsBar />
                 <FinishUpPage />
                 <NavigationButtons currentPage={currentPage} />
-            </>
+            </div>
         );
 
         case 5:
             return(
-                <>
+                <div className='app'>
                     <StepsBar />
                     <CheckoutPage />
-                </>
+                </div>
             );
 
         default:
             return (
-                <>
+                <div className='app'>
                     <StepsBar />
                     <PersonalFormPage />
                     <NavigationButtons currentPage={currentPage} />
-                </>
+                </div>
             );
     }
 }
