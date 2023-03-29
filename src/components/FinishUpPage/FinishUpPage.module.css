@@ -1,6 +1,5 @@
 .finish-up{
-    @apply bottom-12;
-    height: 55%;
+    @apply bottom-6 h-3/5;
 }
 .purchases{
     @apply  flex flex-col bg-purple-50 p-4 rounded-xl mt-5;

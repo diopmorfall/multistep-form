@@ -1,6 +1,6 @@
 .checkout-container{
-    @apply relative bottom-3 h-3/5 flex flex-col items-center justify-between;
-    height: 65%
+    @apply relative top-3 h-3/5 flex flex-col items-center justify-between;
+    height: 70%
 }
 
 .checkout{

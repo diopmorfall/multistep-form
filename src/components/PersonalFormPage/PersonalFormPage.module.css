@@ -1,5 +1,6 @@
 .form-page {
-    @apply bottom-8 h-3/5;
+    @apply bottom-1;
+    height: 65%
 }
 
 .form-page form{

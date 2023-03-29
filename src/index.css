@@ -20,7 +20,7 @@
 }
 
 section{
-    @apply relative w-10/12 mx-auto flex flex-col rounded-2xl bg-white p-6 shadow-lg sm:w-3/4;
+    @apply relative w-10/12 mx-auto flex flex-col rounded-2xl bg-white p-6 shadow-lg md:p-10;
 }
 
 section h1{
@@ -28,7 +28,7 @@ section h1{
 }
 
 section h3{
-    @apply my-3 text-lg font-normal text-gray-400;
+    @apply my-3 text-lg font-normal text-gray-400 md:text-xl;
 }
 
 .attribution{
@@ -46,6 +46,7 @@ section h3{
     }
 }
 
+/*
 @media only screen and (min-width: 768px) and (orientation: portrait){
     section{
         @apply p-10;
@@ -55,3 +56,4 @@ section h3{
         @apply text-xl;
     }
 }
+*/

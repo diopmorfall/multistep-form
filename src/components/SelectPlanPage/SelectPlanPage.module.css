@@ -1,18 +1,20 @@
 .plan-choice{
-    @apply bottom-1;
-    height: 70%;
+    @apply top-1.5;
+    height: 69%;
 }
 
 .plan-choice h3{
-    @apply my-2.5;
+    @apply mt-2;
 }
 
 .plans-container{
-    @apply flex flex-col justify-around w-full h-4/5;
+    @apply relative top-12 flex flex-col justify-around w-full;
+    height: 40%;
 }
 
 .plan {
-    @apply my-2 h-1/3 flex flex-row justify-start items-center rounded-lg border-2 border-gray-400 p-2 sm:my-2;
+    @apply my-1 flex flex-row justify-start items-center rounded-lg border-2 border-gray-400 p-2;
+    height: 80%;
 }
 
 .selected-plan{
@@ -40,7 +42,7 @@
 }
 
 .recurrence-setter{
-    @apply relative top-3 h-12 flex flex-row justify-around items-center rounded-md bg-purple-100 p-2;
+    @apply relative top-28 flex flex-row justify-around items-center rounded-md bg-purple-100 p-2;
 }
 
 .selected{

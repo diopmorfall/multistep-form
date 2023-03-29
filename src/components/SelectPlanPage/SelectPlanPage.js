@@ -37,27 +37,27 @@ export default function SelectPlanPage() {
                     </div>
                 ))}
 
-                <div className={moduleStyles["recurrence-setter"]}>
-                    <span className={
-                            !plansDetails.isYearlyPayment ?
-                            moduleStyles["selected"] : moduleStyles["not-selected"]
-                        }
-                    >Monthly</span>
-                    <div className={
-                            plansDetails.isYearlyPayment ?
-                                `${moduleStyles["toggle-container"]} ${moduleStyles["monthly"]} ` :
-                                `${moduleStyles["toggle-container"]} ${moduleStyles["yearly"]} `
-                        } 
-                        onClick={() => dispatch(setRecurrence())}
-                    >
-                        <div className={moduleStyles["toggle"]} id='toggle'></div>
-                    </div>
-                    <span className={
-                            plansDetails.isYearlyPayment ?
-                            moduleStyles["selected"] : moduleStyles["not-selected"]
-                        }
-                    >Yearly</span>
+            </div>
+            <div className={moduleStyles["recurrence-setter"]}>
+                <span className={
+                        !plansDetails.isYearlyPayment ?
+                        moduleStyles["selected"] : moduleStyles["not-selected"]
+                    }
+                >Monthly</span>
+                <div className={
+                        plansDetails.isYearlyPayment ?
+                            `${moduleStyles["toggle-container"]} ${moduleStyles["monthly"]} ` :
+                            `${moduleStyles["toggle-container"]} ${moduleStyles["yearly"]} `
+                    } 
+                    onClick={() => dispatch(setRecurrence())}
+                >
+                    <div className={moduleStyles["toggle"]} id='toggle'></div>
                 </div>
+                <span className={
+                        plansDetails.isYearlyPayment ?
+                        moduleStyles["selected"] : moduleStyles["not-selected"]
+                    }
+                >Yearly</span>
             </div>
         </section>
     );
