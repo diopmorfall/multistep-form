@@ -16,7 +16,7 @@ label {
 }
 
 input {
-    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800 md:h-12;
+    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800;
 }
 
 small {

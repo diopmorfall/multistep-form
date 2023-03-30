@@ -42,7 +42,7 @@
 }
 
 .recurrence-setter{
-    @apply relative top-28 flex flex-row justify-around items-center rounded-md bg-purple-100 p-2;
+    @apply relative top-32 flex flex-row justify-around items-center rounded-md bg-purple-100 p-2;
 }
 
 .selected{
@@ -54,7 +54,7 @@
 }
 
 .toggle-container{
-    @apply flex w-12 cursor-pointer items-center rounded-full bg-blue-900 p-1.5 sm:h-4/5 md:w-16;
+    @apply flex w-12 cursor-pointer items-center rounded-full bg-blue-900 p-1.5;
     height: 90%;
 }
 
@@ -67,12 +67,26 @@
 }
 
 .toggle{
-    @apply h-3.5 w-3.5 rounded-full bg-white md:h-4 md:w-4;
+    @apply h-3.5 w-3.5 rounded-full bg-white;
+}
+
+@media only screen and (min-width: 640px){
+    .plans-container{
+        @apply top-16;
+    }
+
+    .toggle-container{
+        @apply h-4/5;
+    }
 }
 
 @media only screen and (min-width: 768px){
     .toggle-container{
-        @apply h-full;
+        @apply h-full w-16;
+    }
+
+    .toggle{
+        @apply h-4 w-4;
     }
 }
 

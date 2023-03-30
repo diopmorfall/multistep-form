@@ -8,7 +8,7 @@ nav {
 }
 
 .ul {
-    @apply mx-auto flex w-2/3 justify-around items-center lg:flex-col items-start h-1/2;
+    @apply mx-auto flex w-2/3 justify-around;
     list-style-type: none;
 }
 
@@ -38,12 +38,15 @@ nav {
     }
 }
 
-/*
 @media only screen and (min-width: 1024px){
     nav{
-        height: 600px;
+        @apply relative h-full row-span-2 rounded-xl;
+        height: 100%;
         width: 300px;
-        background-size: auto;
+        background-size: 300px;
+    }
+
+    .ul{
+        @apply flex-col items-start h-1/2;
     }
 }
-*/
