@@ -10,15 +10,19 @@ export default function StepsBar() {
         <nav className='bg-stepsBar'>
             <ul className={moduleStyles['ul']}>
                 {[1, 2, 3, 4].map(step => (
-                    <li key={step}
-                        className={page === step || (page === 5 && step === 4) ? moduleStyles['current-page-li'] : ''}
-                    >
-                        <span
-                            className={page === step || (page === 5 && step === 4) ? moduleStyles['current-page'] : ''}
-                        >{step}</span>
+                    <li key={step}>
+                        <div className={page === step || (page === 5 && step === 4) ?
+                                `${moduleStyles['page-info']} ${moduleStyles['current-page-info']}`
+                                : moduleStyles['page-info']}
+                        >
+                            <span
+                                className={page === step || (page === 5 && step === 4) ? moduleStyles['current-page'] : ''}
+                            >{step}
+                            </span>
+                        </div>
                         <div className={moduleStyles['caption']}>
                             <span>STEP {step}</span>
-                            <span>{steps[step + 1]}</span>
+                            <span>{steps[step - 1]}</span>
                         </div>
                     </li>
                 ))}
