@@ -55,11 +55,16 @@ section h3{
 
 @media only screen and (min-width: 1024px){
     .app{
-        @apply h-3/4 w-11/12 m-auto grid grid-cols-2 grid-rows-2 p-5 bg-white;
+        @apply h-3/4 w-11/12 m-auto grid grid-cols-2 grid-rows-2 p-5 pr-28 bg-white;
     }
 
     section{
-        @apply border-2 border-blue-700;
+        @apply px-0 rounded-none shadow-none border-4;
+        width: 120%;
+    }
+
+    section h1{
+        @apply text-3xl;
     }
 }
 

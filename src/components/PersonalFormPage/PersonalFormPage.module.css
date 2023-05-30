@@ -29,10 +29,20 @@ small {
     }
 
     label{
-        @apply mb-2
+        @apply mb-2;
     }
 
     input{
         @apply h-12 text-lg;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .form-page{
+        height: fit-content;
+    }
+
+    label{
+        
     }
 }
