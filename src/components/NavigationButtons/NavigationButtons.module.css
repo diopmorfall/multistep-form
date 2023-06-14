@@ -52,7 +52,7 @@ footer button:last-of-type{
 
 @media only screen and (min-width: 1024px){
     footer{
-        @apply border-4 mb-8 absolute right-10;
+        @apply mb-8 absolute right-12;
         width: 52%;
     }
 }
