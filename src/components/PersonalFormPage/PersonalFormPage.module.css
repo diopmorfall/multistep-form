@@ -15,11 +15,15 @@ label {
     @apply text-blue-900;
 }
 
-input {
-    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800;
+.input-field {
+    @apply col-span-2 h-10 px-5 rounded-md border-2 font-medium text-blue-800 focus:border-blue-800;
 }
 
-small {
+.invalid-value{
+    @apply border-red-400;
+}
+
+.error {
     @apply font-bold text-red-400;
 }
 
@@ -32,17 +36,25 @@ small {
         @apply mb-2;
     }
 
-    input{
+    .input-field{
         @apply h-12 text-lg;
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .form-page{
-        height: fit-content;
+        @apply top-8 h-fit;
     }
 
     label{
-        
+        @apply mb-2;
+    }
+
+    .error{
+        @apply text-base;
+    }
+
+    .input-field{
+        @apply h-12 text-lg;
     }
 }

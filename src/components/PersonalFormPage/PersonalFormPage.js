@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
 import moduleStyles from './PersonalFormPage.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPersonalInfo } from '../../actions';
@@ -6,11 +8,21 @@ import { setPersonalInfo } from '../../actions';
 export default function PersonalFormPage() {
     const dispatch = useDispatch();
     const [formData, setFormData] = useState(useSelector(state => state.form));
-    const [areInputsInvalid, setAreInputsInvalid] = useState({
+    const initialValues = {
         name: '',
         email: '',
         phoneNumber: '',
+    };
+
+    const validationSchema = Yup.object().shape({
+        name: Yup.string().required('This field is required'),
+        email: Yup.string().email('Please insert a valid email address').required('This field is required'),
+        phoneNumber: Yup.string().required('This field is required'),
     });
+
+    function handleSubmit(values){
+        console.log("Formik", values);
+    }
 
     function handleChange(event) {
         const { name, value } = event.target;
@@ -20,62 +32,59 @@ export default function PersonalFormPage() {
         }));
     }
 
-    function checkFields(e) {
-        const target = e.target;
-        target.value.length === 0
-            ? setAreInputsInvalid(prev => ({ ...prev, [target.name]: true }))
-            : setAreInputsInvalid(prev => ({ ...prev, [target.name]: false }));
-
-        if (target.name === 'email') {
-            target.value.match(/^\S+@\S+$/i)
-                ? setAreInputsInvalid(prev => ({ ...prev, [target.name]: false }))
-                : setAreInputsInvalid(prev => ({ ...prev, [target.name]: true }));
-        }
-
-        if (Object.keys(areInputsInvalid).every(value => value === false)) {
-            dispatch(setPersonalInfo(formData));
-        }
-    }
-
     return (
         <section className={moduleStyles['form-page']}>
             <h1>Personal info</h1>
             <h3>Please provide your name, email address, and phone number.</h3>
-            <form>
-                <div className={moduleStyles["input-container"]}>
-                    <label htmlFor="name">Name</label>
-                    {areInputsInvalid.name && <small>This field is required</small>}
-                    <input
-                        type="text" name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        onBlur={e => checkFields(e)}
-                        placeholder="e.g. Stephen King"
-                    />
-                </div>
-                <div className={moduleStyles["input-container"]}>
-                    <label htmlFor="email"> Email address</label>
-                    {areInputsInvalid.email && <small>Insert a valid email address</small>}
-                    <input
-                        type="email" name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        onBlur={e => checkFields(e)}
-                        placeholder="e.g. stephenking@lorem.com"
-                    />
-                </div>
-                <div className={moduleStyles["input-container"]}>
-                    <label htmlFor="phoneNumber"> Phone number</label>
-                    {areInputsInvalid.phoneNumber && <small>This field is required</small>}
-                    <input
-                        type="tel" name="phoneNumber"
-                        value={formData.phoneNumber}
-                        onChange={handleChange}
-                        onBlur={e => checkFields(e)}
-                        placeholder="e.g. +1 234 567 890"
-                    />
-                </div>
-            </form>
+            <Formik 
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+            >
+                {({getFieldProps, touched, errors}) => (
+                    <Form>
+                        <div className={moduleStyles["input-container"]}>
+                            <label htmlFor="name">Name</label>
+                            <ErrorMessage className={moduleStyles["error"]} name="name" component="div" />
+                            <Field
+                                className={`${moduleStyles["input-field"]} ${touched.name && errors.name ? moduleStyles["invalid-value"] : ''}`}
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                placeholder="e.g. Stephen King"
+                            />
+                        </div>
+                        <div className={moduleStyles["input-container"]}>
+                            <label htmlFor="email"> Email address</label>
+                            <ErrorMessage className={moduleStyles["error"]} name="email" component="div" />
+                            <Field
+                                className={`${moduleStyles["input-field"]} ${touched.email && errors.email ? moduleStyles["invalid-value"] : ''}`}
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                placeholder="e.g. stephenking@lorem.com"
+                            />
+                        </div>
+                        <div className={moduleStyles["input-container"]}>
+                            <label htmlFor="phoneNumber"> Phone number</label>
+                            <ErrorMessage className={moduleStyles["error"]} name="phoneNumber" component="div" />
+                            <Field
+                                className={`${moduleStyles["input-field"]} ${touched.phoneNumber && errors.phoneNumber ? moduleStyles["invalid-value"] : ''}`}
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                value={formData.phoneNumber}
+                                onChange={handleChange}
+                                placeholder="e.g. +1 234 567 890"
+                            />
+                        </div>
+                    </Form>
+                )}
+            </Formik>
         </section>
     );
 }
