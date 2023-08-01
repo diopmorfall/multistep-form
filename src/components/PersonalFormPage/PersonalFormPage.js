@@ -15,21 +15,13 @@ export default function PersonalFormPage() {
     };
 
     const validationSchema = Yup.object().shape({
-        name: Yup.string().required('This field is required'),
-        email: Yup.string().email('Please insert a valid email address').required('This field is required'),
-        phoneNumber: Yup.string().required('This field is required'),
+        name: Yup.string().required('Name is required'),
+        email: Yup.string().email('Please insert a valid email address').required('Email is required'),
+        phoneNumber: Yup.string().required('Phone number is required'),
     });
 
     function handleSubmit(values){
         console.log("Formik", values);
-    }
-
-    function handleChange(event) {
-        const { name, value } = event.target;
-        setFormData(prevData => ({
-            ...prevData,
-            [name]: value,
-        }));
     }
 
     return (
@@ -51,8 +43,6 @@ export default function PersonalFormPage() {
                                 type="text"
                                 id="name"
                                 name="name"
-                                value={formData.name}
-                                onChange={handleChange}
                                 placeholder="e.g. Stephen King"
                             />
                         </div>
@@ -64,8 +54,6 @@ export default function PersonalFormPage() {
                                 type="email"
                                 id="email"
                                 name="email"
-                                value={formData.email}
-                                onChange={handleChange}
                                 placeholder="e.g. stephenking@lorem.com"
                             />
                         </div>
@@ -77,8 +65,6 @@ export default function PersonalFormPage() {
                                 type="tel"
                                 id="phoneNumber"
                                 name="phoneNumber"
-                                value={formData.phoneNumber}
-                                onChange={handleChange}
                                 placeholder="e.g. +1 234 567 890"
                             />
                         </div>
